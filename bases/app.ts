@@ -1,8 +1,4 @@
-let msg: string = "Hola mundo"
-
-const hero = {
-    name: 'Iron man',
-    age: 45
-}
-
-console.log(msg);
+(() => {
+    const a: number = 10
+    console.log(a);
+})()
