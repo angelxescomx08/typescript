@@ -6,6 +6,9 @@
     };
     flash = {
         age: 25,
-        name: 'Barry Allen'
+        name: 'Barry Allen',
+        getName() {
+            return this.name;
+        }
     };
 })();
