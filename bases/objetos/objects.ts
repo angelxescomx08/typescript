@@ -1,5 +1,5 @@
 (() => {
-    let flash = {
+    let flash: { name: string, age: number } = {
         name: 'Barry Alen',
         age: 24
     }
