@@ -22,7 +22,23 @@
 
       
     }
+
+    //los getters siempre deben retornar algo
+    get fullName(){
+      return `${this.name} ${this.realName}`;
+    }
+
+    //el setter siempre debe recibir un parametro, uno y solo uno
+    set fullName(name: string){
+      this.name = name;
+    }
   }
 
   const wolverine = new Xmen("wolverine", "logan", true);
+
+  console.log(wolverine.fullName);
+
+  wolverine.fullName = 'Angel'
+
+  console.log(wolverine.fullName);
 })();
