@@ -1,9 +1,4 @@
-import { Hero, Hero1 as SuperHero } from "./classes/Hero";
-import * as Heros from "./classes/Hero";
-import powers, { Power } from "./data/powers";
+import { genericFunction } from "./generics/generics";
 
-console.log("Hola Mundo!");
-
-const hero = new Hero("Spider-man", 1, 25);
-
-console.log(powers);
+console.log(genericFunction("Hola").length)
+console.log(genericFunction(100.22).toFixed(2))
