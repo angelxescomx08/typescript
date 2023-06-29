@@ -1,4 +1,9 @@
-import { genericFunction } from "./generics/generics";
+import { getPokemon } from "./generics/get-pokemon";
 
-console.log(genericFunction("Hola").length)
-console.log(genericFunction(100.22).toFixed(2))
+getPokemon(1)
+  .then((resp) => {
+    console.log(resp);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
