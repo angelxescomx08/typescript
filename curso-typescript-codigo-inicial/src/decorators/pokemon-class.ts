@@ -1,22 +1,23 @@
-function printToConsole(constructor: Function){
+function printToConsole(constructor: Function) {
   console.log(constructor);
 }
 
 const printToConsoleConditional = (print: boolean = false) => {
-  if(print){
-    return printToConsole
+  if (print) {
+    return printToConsole;
   }
-  return () => {}
-}
+  return () => {};
+};
 
+const bloquearPrototipo = function (constructor: Function) {
+  Object.seal(constructor);
+  Object.seal(constructor.prototype);
+};
+
+@bloquearPrototipo
 @printToConsoleConditional(true)
 export class Pokemon {
+  public publicApi: string = "https://pokeapi.co";
 
-  public publicApi : string = "https://pokeapi.co"
-
-  constructor(
-    public name: string
-  ){
-
-  }
+  constructor(public name: string) {}
 }
